@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.BishopBlack;
 import ru.job4j.chess.firuges.black.PawnBlack;
+
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -32,12 +33,12 @@ public class LogicTest {
 
     @Test
     public void moveThrowOccupiedCellException()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException{
+            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         assertThrows(OccupiedCellException.class, () -> {
-        logic.add(new BishopBlack(Cell.C1));
-        logic.add(new PawnBlack(Cell.D2));
-        logic.move(Cell.C1, Cell.E3);
+            logic.add(new BishopBlack(Cell.C1));
+            logic.add(new PawnBlack(Cell.D2));
+            logic.move(Cell.C1, Cell.E3);
         });
     }
 }
