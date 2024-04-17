@@ -31,6 +31,6 @@ class BishopBlackTest {
     void isDiagonalFromC1ToG4IsFalse() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         boolean rsl = bishopBlack.isDiagonal(bishopBlack.position(), Cell.G4);
-        assertThat(rsl).isEqualTo(false);
+        assertThat(rsl).isFalse();
     }
 }
